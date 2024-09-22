@@ -1,0 +1,311 @@
+h4 {
+    text-align: center;
+}
+
+.form-box h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.input-box {
+    position: relative;
+    width: 80%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px auto;
+    padding-left: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.input-box input {
+    margin-left: 21px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 20px;
+    transition: 0.2s ease;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: 10%;
+    left: 50px;
+    color: #333;
+    font-size: 17px;
+}
+
+.input-box input:focus ~ .icon,
+.input-box input:valid ~ .icon {
+    top: 10%;
+    left: 20px;
+    color: #333;
+    font-size: 20px;
+}
+
+.remember-forgot {
+    font-size: 1.2em;
+    color: #162938;
+    font-weight: 500;
+    margin: 10px auto; /* Centered and responsive */
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.remember-forgot label {
+    margin-right: 20px;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: block;
+    width: 20%;
+    padding: 10px 5px;
+    background-color: #28b1c5; /* Adjust the color as needed */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 12px auto;
+}
+
+.btn:hover {
+    background-color: #1e90a1;
+}
+
+.login-register {
+    text-align: center;
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+.login-register p {
+    margin: 0;
+}
+
+.login-register a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.form-box.register {
+    display: none; /* Hide the register form by default */
+}
+
+.wrapper.active .form-box.register {
+    display: block; /* Show register form when active */
+}
+
+.wrapper.active .form-box.login {
+    display: none; /* Hide login form when register is active */
+}
+
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup{
+    width: 125;
+    height: 50;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup{
+    background: #fff;
+    color: #000000;
+}
+
+.wrapper {
+    display: none;
+    position: relative;
+    margin: 5% auto; /* Use percentage-based margin to center the box */
+    width: 90%; /* Make the wrapper responsive */
+    max-width: 460px; /* Set a maximum width */
+    height: auto; /* Use auto height for flexibility */
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: height 0.3s ease;
+}
+
+.wrapper.active {
+    display: flex;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.wrapper .form-box.login, .wrapper .form-box.register {
+    min-height: 300px; /* Consistent height */
+    height: auto; 
+    /*display: none;*/
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(470px);
+}
+
+.wrapper .form-box.register{
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: #162938;
+    border-radius: 7px 10px;
+    font-size: 1.5em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h4 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.form-box.login {
+    margin-top: 30px; /* Increase this value to move the heading downward */
+}
+
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box input{
+    margin-left: 21px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+}
+
+.remember-forgot {
+    font-size: 1.2em;
+    color: #162938;
+    font-weight: 500;
+    margin: -10px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.media-container {
+    display: flex;
+    justify-content: center; /* Center the images */
+    align-items: center;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    margin-top: 30px; /* Adjust the top margin as needed */
+    max-width: 80%; /* Set a max width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.media-img {
+    margin: 10px; /* Add spacing between images */
+    height: 186px; /* Fixed height */
+    width: 279px; /* Fixed width */
+    object-fit: cover;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Center the video */
+    margin-top: 40px; /* Adjust the top margin as needed */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.media-video {
+    height: 370px; /* Fixed height */
+    width: 54% auto; /* Percentage-based width to adapt to container size */
+    max-width: 100%; /* Ensure it doesn't overflow */
+}
